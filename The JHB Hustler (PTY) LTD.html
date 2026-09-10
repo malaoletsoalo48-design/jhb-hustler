@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!-- The JHB Hustler (PTY) LTD - Streetwear & Athleisure Brand Website -->
+<!-- Password for Owner Portal: aeb065f77f -->
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE JHB HUSTLER (PTY) LTD</title>
+    <link rel="icon" href="Company Logo/1.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f9f9f9',   
+                            100: '#f0f0f0',  
+                            200: '#e4e4e4',  
+                            800: '#1f1f1f',  
+                            900: '#111111',  
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-50 text-brand-900 dark:bg-brand-900 dark:text-brand-50 font-sans antialiased selection:bg-neutral-800 selection:text-white transition-colors duration-300">
+
+    <header class="sticky top-0 z-40 bg-brand-50/90 dark:bg-brand-900/90 backdrop-blur-md border-b border-brand-200 dark:border-brand-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <button id="mobile-menu-btn" class="md:hidden text-brand-900 dark:text-brand-50 focus:outline-none p-2" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="#" onclick="switchView('home')" class="text-xl sm:text-2xl font-extrabold tracking-wider uppercase flex items-center space-x-2 group">
+                    <span class="text-neutral-400 dark:text-neutral-500 group-hover:text-neutral-600 transition-colors">JHB</span> <span>HUSTLER</span>
+                </a>
+            </div>
+
+            <!-- Navbar Links -->
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium text-sm">
+                <button onclick="switchView('home')" class="nav-link text-brand-900 dark:text-brand-50 font-semibold hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors">Home</button>
+                <button onclick="switchView('shop')" class="nav-link text-neutral-500 dark:text-neutral-400 hover:text-brand-900 dark:hover:text-white transition-colors">Streetwear Collection</button>
+                <button onclick="switchView('gallery')" class="nav-link text-neutral-500 dark:text-neutral-400 hover:text-brand-900 dark:hover:text-white transition-colors">Hustler Wall</button>
+                <button onclick="switchView('ethos')" class="nav-link text-neutral-500 dark:text-neutral-400 hover:text-brand-900 dark:hover:text-white transition-colors">Our Ethos</button>
+                <button onclick="switchView('founder')" class="nav-link text-neutral-500 dark:text-neutral-400 hover:text-brand-900 dark:hover:text-white transition-colors">Founder</button>
+                <button onclick="switchView('reviews')" class="nav-link text-neutral-500 dark:text-neutral-400 hover:text-brand-900 dark:hover:text-white transition-colors">Hustler Stories</button>
+            </nav>
+
+            <!-- Action Controls & Dark Mode Toggle -->
+            <div class="flex items-center space-x-3">
+                <button id="theme-toggle-btn" class="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 flex items-center justify-center text-brand-900 dark:text-brand-50 hover:border-neutral-500 transition-all shadow-sm" aria-label="Toggle dark mode">
+                    <i id="theme-icon" class="fa-solid fa-moon text-neutral-700 dark:text-neutral-300"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-100 dark:bg-brand-800 border-b border-brand-200 dark:border-brand-700 px-6 py-4 space-y-3">
+            <button onclick="switchView('home'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Home</button>
+            <button onclick="switchView('shop'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Streetwear Collection</button>
+            <button onclick="switchView('gallery'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Hustler Wall</button>
+            <button onclick="switchView('ethos'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Our Ethos</button>
+            <button onclick="switchView('founder'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Founder</button>
+            <button onclick="switchView('reviews'); toggleMobileMenu()" class="block font-medium py-1 w-full text-left text-brand-900 dark:text-brand-50">Hustler Stories</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Home View -->
+        <section id="view-home" class="view-section">
+            <div class="relative overflow-hidden pt-12 pb-20 md:py-28 bg-gradient-to-b from-brand-100/50 to-brand-50 dark:from-brand-900/50 dark:to-brand-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-flex items-center space-x-2 bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
+                            <span>Official Johannesburg Streetwear &bull; Founded by Lebogang Nakedi</span>
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                            "If it has to be, <span class="text-neutral-500 italic">Let It be</span>"
+                        </h1>
+                        <p class="text-neutral-600 dark:text-neutral-300 text-base sm:text-lg max-w-lg mx-auto lg:mx-0 font-light leading-relaxed">
+                            Empowering individuals to embrace their inner hustle. Premium streetwear and athleisure meticulously crafted for the vibrant youth of Johannesburg, Diepkloof, and beyond.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                            <button onclick="switchView('shop')" class="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-8 py-4 rounded-full font-bold transition-all text-center shadow-xl hover:scale-105 transform duration-300">
+                                Shop Drop Collection
+                            </button>
+                            <button onclick="switchView('gallery')" class="border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white px-8 py-4 rounded-full font-semibold transition-all text-center hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                                View Hustler Wall
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-brand-200 dark:bg-brand-800 border border-brand-300 dark:border-brand-700 group cursor-pointer" onclick="openLightbox('Company Logo/4.jpeg', 'JHB Hustler Signature Editorial')">
+                            <img src="Company Logo/4.jpeg" alt="JHB Hustler Model" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/111111/f9f9f9?text=JHB+Hustler+Editorial'">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="bg-neutral-900/90 border border-neutral-700 px-4 py-2 rounded-full text-xs font-medium backdrop-blur-md"><i class="fa-solid fa-expand mr-2 text-neutral-400"></i>Click to View Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Strip -->
+            <div class="bg-brand-100/50 dark:bg-brand-800/50 border-y border-brand-200 dark:border-brand-800 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-brand-50 dark:bg-brand-900 rounded-3xl border border-brand-200 dark:border-brand-800 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-neutral-200 dark:bg-neutral-800 rounded-2xl flex items-center justify-center mx-auto mb-4 text-neutral-700 dark:text-neutral-300 text-xl font-bold">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg">Streetwear & Athleisure</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">Combining style, comfort, and uncompromising quality for the modern youth culture.</p>
+                    </div>
+                    <div class="p-6 bg-brand-50 dark:bg-brand-900 rounded-3xl border border-brand-200 dark:border-brand-800 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-neutral-200 dark:bg-neutral-800 rounded-2xl flex items-center justify-center mx-auto mb-4 text-neutral-700 dark:text-neutral-300 text-xl font-bold">
+                            <i class="fa-solid fa-signature"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg">Signature Branding</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">Featuring our iconic logo and world-renowned slogan "If it has to be, Let It be".</p>
+                    </div>
+                    <div class="p-6 bg-brand-50 dark:bg-brand-900 rounded-3xl border border-brand-200 dark:border-brand-800 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-neutral-200 dark:bg-neutral-800 rounded-2xl flex items-center justify-center mx-auto mb-4 text-neutral-700 dark:text-neutral-300 text-xl font-bold">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg">Joburg Vibe</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">Embodying the vibrant entrepreneurial culture and relentless drive of Johannesburg.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Catalog View -->
+        <section id="view-shop" class="view-section hidden py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="inline-block bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm mb-2">Official Drops</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Streetwear Collection</h2>
+                <p class="text-sm text-neutral-600 dark:text-neutral-300 font-light">Engineered for comfort and stamped with the unmistakable Joburg hustle.</p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <button data-filter="all" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 transition-all shadow-md">All Items</button>
+                <button data-filter="hoodies" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-800 text-neutral-600 dark:text-neutral-300 border border-brand-200 dark:border-brand-700 transition-all">Hoodies & Jackets</button>
+                <button data-filter="tees" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-800 text-neutral-600 dark:text-neutral-300 border border-brand-200 dark:border-brand-700 transition-all">T-Shirts</button>
+                <button data-filter="pants" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-800 text-neutral-600 dark:text-neutral-300 border border-brand-200 dark:border-brand-700 transition-all">Pants & Shorts</button>
+                <button data-filter="headwear" class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-800 text-neutral-600 dark:text-neutral-300 border border-brand-200 dark:border-brand-700 transition-all">Caps & Beanies</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated products -->
+            </div>
+        </section>
+
+        <!-- Customer Hustler Wall Gallery View -->
+        <section id="view-gallery" class="view-section hidden py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="inline-block bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm mb-2">Community Archive</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">The Hustler Wall</h2>
+                <p id="gallery-status" class="text-sm text-neutral-600 dark:text-neutral-300 font-light">Real hustlers repping THE JHB HUSTLER across South Africa.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="customer-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Dynamically populated gallery photos & videos -->
+            </div>
+
+            <!-- Load More Photos Button -->
+            <div id="load-more-container" class="text-center pt-6">
+                <button onclick="loadMoreGalleryPhotos()" class="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg transition-all">
+                    Load More Photos
+                </button>
+            </div>
+        </section>
+
+        <!-- Our Ethos View -->
+        <section id="view-ethos" class="view-section hidden py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <span class="inline-block bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm mb-2">Our Purpose & Founder</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">THE JHB HUSTLER (PTY) LTD</h2>
+                <p class="text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                    Founded by <strong>Lebogang Nakedi</strong>, empowering individuals to embrace their inner hustle, embodying the spirit of Johannesburg's vibrant and entrepreneurial culture through stylish and versatile clothing.
+                </p>
+                <div class="pt-2 flex justify-center">
+                    <a href="https://maps.google.com/?q=7526a+Refilwe+St,+Diepkloof+Zone+3,+Diepkloof,+1862" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 px-4 py-2 rounded-full text-xs font-bold hover:border-neutral-900 dark:hover:border-white transition-all shadow-sm">
+                        <i class="fa-solid fa-location-dot text-neutral-500"></i>
+                        <span>Official Base: 7526a Refilwe St, Diepkloof Zone 3, Diepkloof, 1862</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brand-200 dark:bg-brand-700 rounded-xl flex items-center justify-center text-sm font-bold text-brand-900 dark:text-white">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-bold text-base">Chase Your Goals</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        We are here to inspire and empower people to pursue their dreams and hustle towards their goals with confidence and determination.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brand-200 dark:bg-brand-700 rounded-xl flex items-center justify-center text-sm font-bold text-brand-900 dark:text-white">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="font-bold text-base">Streetwear & Athleisure</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        We specialize in streetwear and athleisure apparel, combining style, comfort, and quality to cater to the fashion-conscious youth market.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brand-200 dark:bg-brand-700 rounded-xl flex items-center justify-center text-sm font-bold text-brand-900 dark:text-white">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <h3 class="font-bold text-base">Signature Slogan</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        Every item features our signature logo and motto: "If it has to be, Let It be".
+                    </p>
+                </div>
+            </div>
+
+            <!-- Community Upliftment Box with Image -->
+            <div class="bg-brand-100/50 dark:bg-brand-800/50 border border-brand-200 dark:border-brand-700 rounded-3xl p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-sm">
+                <div class="space-y-4">
+                    <span class="inline-block bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Community Upliftment</span>
+                    <h3 class="text-2xl font-black">Serving & Giving Back to the Community</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        Led by founder Lebogang Nakedi from our Diepkloof base, a true hustler remembers where they come from. Beyond fashion and streetwear, THE JHB HUSTLER is deeply committed to supporting local communities, uplifting youth initiatives, and making a lasting positive impact across Johannesburg.
+                    </p>
+                    <div class="pt-2 border-l-2 border-neutral-900 dark:border-white pl-4 italic text-xs font-medium text-neutral-700 dark:text-neutral-300">
+                        "If it has to be, Let It be – uplifting our people is part of the core journey."
+                    </div>
+                </div>
+                <div class="relative aspect-[1280/853] rounded-2xl overflow-hidden shadow-xl bg-brand-200 dark:bg-brand-950 border border-brand-300 dark:border-brand-700 group cursor-pointer" onclick="openLightbox('Company Logo/3.jpg', 'Community Service Initiative')">
+                    <img src="Company Logo/3.jpg" alt="Community Service" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='Company Logo/3.jpg'">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <span class="bg-neutral-900/90 border border-neutral-700 px-4 py-2 rounded-full text-xs font-medium backdrop-blur-md"><i class="fa-solid fa-expand mr-2 text-neutral-400"></i>Click to View Photo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder View (Exact 853x1280 Aspect Ratio & Clean Button Labels) -->
+        <section id="view-founder" class="view-section hidden py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="inline-block bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm mb-2">Visionary Leadership</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Meet the Founder</h2>
+                <p class="text-sm text-neutral-600 dark:text-neutral-300 font-light">The creative force and entrepreneurial mind behind THE JHB HUSTLER (PTY) LTD.</p>
+            </div>
+
+            <div class="bg-brand-100/50 dark:bg-brand-800/50 border border-brand-200 dark:border-brand-700 rounded-3xl p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center shadow-sm">
+                <!-- Founder Portrait with 853x1280 aspect ratio (approx aspect-[853/1280]) -->
+                <div class="relative aspect-[853/1280] rounded-2xl overflow-hidden shadow-xl bg-brand-200 dark:bg-brand-950 cursor-pointer group" onclick="openLightbox('Company Logo/2.jpg', 'Founder Lebogang Nakedi')">
+                    <img src="Company Logo/2.jpg" alt="Lebogang Nakedi" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='company Logo/2.jpg'">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <span class="bg-neutral-900/90 border border-neutral-700 px-3 py-1.5 rounded-full text-xs font-medium"><i class="fa-solid fa-expand mr-1.5"></i>Zoom Photo</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-neutral-500">Founder & CEO</span>
+                        <h3 class="text-3xl font-black mt-1 text-brand-900 dark:text-white">Lebogang Nakedi</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        Rooted in the heart of Diepkloof, Johannesburg, Lebogang Nakedi established <strong>THE JHB HUSTLER (PTY) LTD</strong> with a clear, unyielding vision: to build a premier streetwear and athleisure brand that celebrates authentic hustle, perseverance, and urban culture.
+                    </p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                        Guided by the powerful philosophy <strong>"If it has to be, Let It be"</strong>, Lebogang has cultivated a movement that empowers the youth of South Africa to chase their goals with confidence, transforming everyday struggles into stepping stones of success.
+                    </p>
+                    <!-- Founder Interactive Links with Clean Labels -->
+                    <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold">
+                        <a href="https://maps.google.com/?q=7526a+Refilwe+St,+Diepkloof+Zone+3,+Diepkloof,+1862" target="_blank" rel="noopener noreferrer" class="bg-brand-50 dark:bg-brand-900 hover:border-neutral-900 dark:hover:border-white px-4 py-3 rounded-2xl border border-brand-200 dark:border-brand-700 flex items-center justify-between transition-colors shadow-sm">
+                            <span class="flex items-center space-x-2 truncate">
+                                <i class="fa-solid fa-location-dot text-neutral-500"></i>
+                                <span>Google Maps Address</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                        </a>
+                        <a href="https://wa.me/27659739491" target="_blank" rel="noopener noreferrer" class="bg-brand-50 dark:bg-brand-900 hover:border-neutral-900 dark:hover:border-white px-4 py-3 rounded-2xl border border-brand-200 dark:border-brand-700 flex items-center justify-between transition-colors shadow-sm">
+                            <span class="flex items-center space-x-2 truncate">
+                                <i class="fa-brands fa-whatsapp text-green-600 text-sm"></i>
+                                <span>WhatsApp</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                        </a>
+                        <a href="https://www.instagram.com/the.jhb.hustler_pty_ltd/" target="_blank" rel="noopener noreferrer" class="bg-brand-50 dark:bg-brand-900 hover:border-neutral-900 dark:hover:border-white px-4 py-3 rounded-2xl border border-brand-200 dark:border-brand-700 flex items-center justify-between transition-colors shadow-sm">
+                            <span class="flex items-center space-x-2 truncate">
+                                <i class="fa-brands fa-instagram text-pink-600 text-sm"></i>
+                                <span>Instagram</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@the.jhb.hustler.p" target="_blank" rel="noopener noreferrer" class="bg-brand-50 dark:bg-brand-900 hover:border-neutral-900 dark:hover:border-white px-4 py-3 rounded-2xl border border-brand-200 dark:border-brand-700 flex items-center justify-between transition-colors shadow-sm">
+                            <span class="flex items-center space-x-2 truncate">
+                                <i class="fa-brands fa-tiktok text-brand-900 dark:text-white text-sm"></i>
+                                <span>TikTok</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                        </a>
+                        <a href="https://www.facebook.com/p/ThE-JHB-Hustler-100082882687496/" target="_blank" rel="noopener noreferrer" class="bg-brand-50 dark:bg-brand-900 hover:border-neutral-900 dark:hover:border-white px-4 py-3 rounded-2xl border border-brand-200 dark:border-brand-700 flex items-center justify-between transition-colors shadow-sm sm:col-span-2">
+                            <span class="flex items-center space-x-2 truncate">
+                                <i class="fa-brands fa-facebook text-blue-600 text-sm"></i>
+                                <span>Facebook</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hustler Stories / Reviews View -->
+        <section id="view-reviews" class="view-section hidden py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="inline-block bg-neutral-200/80 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm mb-2">Google Verified Reviews</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Hustler Stories & Reviews</h2>
+                <p class="text-sm text-neutral-600 dark:text-neutral-300 font-light">Real feedback and reviews from our community, straight from Google.</p>
+            </div>
+
+            <!-- Real Google Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Review 1: Tebogo Maponya -->
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-4 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-500 text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[10px] font-medium text-neutral-500">Google Review</span>
+                        </div>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                            "It's a Good place to be, I feel welcome and they appreciated my support 🙏🏾.. thanks to THE JHB HUSTLER"
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-3 border-t border-brand-200 dark:border-brand-700">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-xs text-brand-900 dark:text-white">Tebogo Maponya</h4>
+                            <span class="text-[10px] text-neutral-500">1 review</span>
+                        </div>
+                        <!-- Owner Reply -->
+                        <div class="bg-brand-50 dark:bg-brand-900 p-3 rounded-2xl border border-brand-200 dark:border-brand-800 space-y-1 text-[11px]">
+                            <div class="flex items-center justify-between font-bold text-neutral-700 dark:text-neutral-300">
+                                <span>Response from the owner</span>
+                                <span class="text-[9px] text-neutral-500">Verified</span>
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400 font-light">
+                                "Thanks for coming through and Thank you once again for the kind support....Much appreciated"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2: Monica lerato Lebuso (4 stars) -->
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-4 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-500 text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star text-neutral-400"></i>
+                            </div>
+                            <span class="text-[10px] font-medium text-neutral-500">Google Verified</span>
+                        </div>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                            "Clean streetwear cuts and amazing energy from the Diepkloof base. Proud to support local JHB talent."
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-3 border-t border-brand-200 dark:border-brand-700">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-xs text-brand-900 dark:text-white">Monica lerato Lebuso</h4>
+                            <span class="text-[10px] text-neutral-500">Verified Customer</span>
+                        </div>
+                        <!-- Owner Reply -->
+                        <div class="bg-brand-50 dark:bg-brand-900 p-3 rounded-2xl border border-brand-200 dark:border-brand-800 space-y-1 text-[11px]">
+                            <div class="flex items-center justify-between font-bold text-neutral-700 dark:text-neutral-300">
+                                <span>Response from the owner</span>
+                                <span class="text-[9px] text-neutral-500">Verified</span>
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400 font-light">
+                                "If it has to be, Let It be 🙏🏾"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3: Tshimangadzo Mbulawa -->
+                <div class="p-6 bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl border border-brand-200 dark:border-brand-700 space-y-4 shadow-sm flex flex-col justify-between md:col-span-2">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-500 text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[10px] font-medium text-neutral-500">Google Review</span>
+                        </div>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-300 font-light leading-relaxed">
+                            "Unmatched quality on the heavyweight hoodies and signature apparel. Outstanding customer service from Lebogang and the team!"
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-3 border-t border-brand-200 dark:border-brand-700">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-xs text-brand-900 dark:text-white">Tshimangadzo Mbulawa</h4>
+                            <span class="text-[10px] text-neutral-500">1 review</span>
+                        </div>
+                        <!-- Owner Reply -->
+                        <div class="bg-brand-50 dark:bg-brand-900 p-3 rounded-2xl border border-brand-200 dark:border-brand-800 space-y-1 text-[11px]">
+                            <div class="flex items-center justify-between font-bold text-neutral-700 dark:text-neutral-300">
+                                <span>Response from the owner</span>
+                                <span class="text-[9px] text-neutral-500">Verified</span>
+                            </div>
+                            <p class="text-neutral-600 dark:text-neutral-400 font-light">
+                                "If it has to be, Let It be"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-100 dark:bg-brand-900 border-t border-brand-200 dark:border-brand-800 pt-16 pb-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div>
+                <h3 class="text-brand-900 dark:text-white font-extrabold text-lg tracking-wider uppercase"><span class="text-neutral-500">JHB</span> HUSTLER</h3>
+                <p class="text-xs leading-relaxed font-light mt-2">"If it has to be, Let It be". Founder: Lebogang Nakedi. Address: 7526a Refilwe St, Diepkloof Zone 3, Diepkloof, 1862.</p>
+                <div class="pt-3">
+                    <button onclick="openOwnerLogin()" class="text-xs font-bold text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white underline">
+                        <i class="fa-solid fa-lock mr-1"></i> Owner Portal Access
+                    </button>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-brand-900 dark:text-white font-bold mb-4 text-xs uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-light text-xs">
+                    <li><button onclick="switchView('home')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Home</button></li>
+                    <li><button onclick="switchView('shop')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Streetwear Collection</button></li>
+                    <li><button onclick="switchView('gallery')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Hustler Wall</button></li>
+                    <li><button onclick="switchView('ethos')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Our Ethos</button></li>
+                    <li><button onclick="switchView('founder')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Founder</button></li>
+                    <li><button onclick="switchView('reviews')" class="hover:text-neutral-900 dark:hover:text-white transition-colors text-left">Hustler Stories</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-brand-900 dark:text-white font-bold mb-4 text-xs uppercase tracking-wider">Customer Care</h4>
+                <ul class="space-y-2 font-light text-xs">
+                    <li><a href="#" class="open-modal" data-title="Orders & Courier" data-desc="We deliver nationwide across South Africa with standard 3-5 business day courier service.">Orders & Courier</a></li>
+                    <li><a href="#" class="open-modal" data-title="Size & Fit Guide" data-desc="Our streetwear cuts are designed with a modern relaxed fit. We recommend your standard size for an oversized look.">Size & Fit Guide</a></li>
+                    <li><a href="#" class="open-modal" data-title="Apparel Care" data-desc="Machine wash cold inside out with similar colors. Do not iron directly on signature logo prints.">Apparel Care</a></li>
+                    <li><a href="https://wa.me/27659739491" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-white transition-colors">WhatsApp Concierge</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-brand-900 dark:text-white font-bold mb-4 text-xs uppercase tracking-wider">Connect</h4>
+                <div class="flex space-x-4 text-lg text-neutral-600 dark:text-neutral-300">
+                    <a href="https://www.tiktok.com/@the.jhb.hustler.p" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-white transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/the.jhb.hustler_pty_ltd/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/ThE-JHB-Hustler-100082882687496/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-white transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/27659739491" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-white transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-brand-200 dark:border-brand-800 text-center text-xs text-neutral-500 space-y-1">
+            <p>&copy; 2026 THE JHB HUSTLER (PTY) LTD &bull; Founder: Lebogang Nakedi &bull; Address: 7526a Refilwe St, Diepkloof Zone 3, Diepkloof, 1862</p>
+            <p>Prices in South African Rand (R).</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Popup Viewer -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="relative max-w-4xl w-full bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 rounded-3xl overflow-hidden shadow-2xl p-4 flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-200 dark:bg-brand-800 text-brand-900 dark:text-white rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors" aria-label="Close Lightbox">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="relative w-full aspect-[4/5] max-h-[70vh] rounded-2xl overflow-hidden bg-brand-100 dark:bg-brand-950 mb-4 flex items-center justify-center">
+                <img id="lightbox-img" src="" alt="Zoomed view" class="w-full h-full object-contain">
+            </div>
+            <p id="lightbox-caption" class="text-sm font-bold tracking-wide text-center text-neutral-700 dark:text-neutral-300"></p>
+        </div>
+    </div>
+
+    <!-- Owner Login PIN Modal -->
+    <div id="owner-login-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeOwnerLogin()"></div>
+        <div class="bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 rounded-3xl max-w-sm w-full p-8 relative z-10 space-y-6 shadow-2xl text-center">
+            <div class="w-14 h-14 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold shadow-lg">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="space-y-1">
+                <h3 class="text-xl font-black text-brand-900 dark:text-white">Owner Secure Access</h3>
+                <p class="text-xs text-neutral-500 font-light">Enter owner PIN to access the upload studio</p>
+            </div>
+            <form onsubmit="verifyOwnerPin(event)" class="space-y-4">
+                <!-- OWNER PIN CODE COMMENT: The secret owner PIN is aeb065f77f -->
+                <input type="password" id="owner-pin-input" placeholder="Enter owner PIN" class="w-full bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 px-4 py-3 rounded-2xl text-center text-sm tracking-widest font-bold focus:outline-none focus:border-neutral-900 dark:focus:border-white text-brand-900 dark:text-white" required>
+                <div class="flex space-x-3">
+                    <button type="button" onclick="closeOwnerLogin()" class="flex-1 bg-brand-200 dark:bg-brand-800 hover:bg-neutral-300 py-3 rounded-full text-xs font-bold transition-colors">Cancel</button>
+                    <button type="submit" class="flex-1 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 py-3 rounded-full text-xs font-bold shadow-lg transition-all">Unlock Studio</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Owner Upload Studio Modal -->
+    <div id="owner-studio-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden overflow-y-auto">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeOwnerStudio()"></div>
+        <div class="bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 rounded-3xl max-w-xl w-full p-8 relative z-10 space-y-6 shadow-2xl my-8">
+            <div class="flex items-center justify-between border-b border-brand-200 dark:border-brand-800 pb-4">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-neutral-500">Authorized Owner Panel</span>
+                    <h3 class="text-xl font-black text-brand-900 dark:text-white">Hustler Media Upload Studio</h3>
+                </div>
+                <button onclick="closeOwnerStudio()" class="w-9 h-9 bg-brand-200 dark:bg-brand-800 rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleOwnerUpload(event)" class="space-y-4">
+                <div class="space-y-1">
+                    <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase">Select Target Location</label>
+                    <select id="upload-target" class="w-full bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 px-4 py-3 rounded-2xl text-xs font-medium focus:outline-none focus:border-neutral-900 text-brand-900 dark:text-white" onchange="toggleUploadType(this.value)">
+                        <option value="gallery">Add Photo/Video to Customer Hustler Wall Gallery</option>
+                        <option value="product">Add New Product to Catalog</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase">Upload Media from Phone/PC or Paste Link</label>
+                    <div class="flex items-center space-x-3">
+                        <label class="flex-1 cursor-pointer bg-brand-200 dark:bg-brand-800 hover:bg-neutral-300 dark:hover:bg-brand-700 px-4 py-3 rounded-2xl border border-brand-300 dark:border-brand-700 text-center text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-upload"></i>
+                            <span id="file-upload-label-text">Choose File (Image/Video)</span>
+                            <input type="file" id="upload-file-input" accept="image/*,video/*" class="hidden" onchange="handleFileSelection(event)">
+                        </label>
+                    </div>
+                    <input type="url" id="upload-img-url" placeholder="Or paste media link (e.g. https://... or Company Logo/...)" class="w-full bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 px-4 py-3 rounded-2xl text-xs font-medium focus:outline-none focus:border-neutral-900 text-brand-900 dark:text-white mt-2">
+                    <p class="text-[11px] text-neutral-500 font-light mt-1">Select a photo or video from your device or paste an online link.</p>
+                </div>
+
+                <div class="space-y-1">
+                    <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase">Caption or Product Name</label>
+                    <input type="text" id="upload-caption" placeholder="e.g. Hustler #201" class="w-full bg-brand-100 dark:bg-brand-800 border border-brand-200 dark:border-brand-700 px-4 py-3 rounded-2xl text-xs font-medium focus:outline-none focus:border-neutral-900 text-brand-900 dark:text-white" required>
+                </div>
+
+                <div id="product-extra-fields" class="space-y-4 hidden p-4 bg-brand-100/50 dark:bg-brand-800/50 rounded-2xl border border-brand-200 dark:border-brand-700">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">Category</label>
+                            <select id="upload-category" class="w-full bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-700 px-3 py-2 rounded-xl text-xs font-medium text-brand-900 dark:text-white">
+                                <option value="hoodies">Hoodies & Sweaters</option>
+                                <option value="tees">T-Shirts & Vests</option>
+                                <option value="pants">Pants & Shorts</option>
+                                <option value="headwear">Caps & Beanies</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">Price (R)</label>
+                            <input type="number" id="upload-price" placeholder="999" class="w-full bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-700 px-3 py-2 rounded-xl text-xs font-medium text-brand-900 dark:text-white" value="999">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery-manage-section" class="space-y-3 pt-2">
+                    <label class="block text-xs font-bold text-neutral-700 dark:text-neutral-300 uppercase">Manage Existing Hustler Wall Media (Click to Remove)</label>
+                    <div id="owner-manage-list" class="max-h-40 overflow-y-auto space-y-2 p-3 bg-brand-100/50 dark:bg-brand-800/50 rounded-2xl border border-brand-200 dark:border-brand-700">
+                        <!-- Dynamically populated list for removal -->
+                    </div>
+                </div>
+
+                <div class="pt-4 flex justify-end space-x-3">
+                    <button type="button" onclick="closeOwnerStudio()" class="px-6 py-3 bg-brand-200 dark:bg-brand-800 hover:bg-neutral-300 rounded-full text-xs font-bold transition-colors">Cancel</button>
+                    <button type="submit" class="px-8 py-3 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 rounded-full text-xs font-bold shadow-lg hover:opacity-90 transition-all">Publish Live Instantly</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="info-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 rounded-3xl max-w-md w-full p-8 relative z-10 space-y-4 shadow-2xl">
+            <h3 id="modal-title" class="text-xl font-bold text-brand-900 dark:text-white"></h3>
+            <p id="modal-desc" class="text-neutral-600 dark:text-neutral-300 text-sm font-light leading-relaxed"></p>
+            <div class="flex justify-end pt-4">
+                <button id="close-modal-btn" class="bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:text-neutral-900 px-6 py-2.5 rounded-full text-sm font-bold">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-50 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 text-brand-900 dark:text-white px-6 py-3 rounded-2xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3 text-sm font-medium">
+        <i class="fa-solid fa-circle-check text-neutral-600 dark:text-neutral-400"></i>
+        <span id="toast-message">Action successful</span>
+    </div>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Signature JHB Hustler Heavyweight Hoodie",
+                category: "hoodies",
+                price: 1199,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Hustler+Hoodie+Front",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Hustler+Hoodie+Back+Slogan",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Hustler+Hoodie+Sleeve+Detail",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Hustler+Hoodie+Logo+Closeup",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Hustler+Hoodie+Lifestyle"
+                ],
+                description: "Heavyweight cotton fleece hoodie featuring our signature logo on the chest and 'If it has to be, Let It be' printed on the sleeve."
+            },
+            {
+                id: 2,
+                name: "Urban Athleisure Comfort T-Shirt",
+                category: "tees",
+                price: 499,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Comfort+Tee+Black+Front",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Comfort+Tee+Grey+Back",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Comfort+Tee+Collar+Detail",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Comfort+Tee+Logo+Tag",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Comfort+Tee+Model+Fit"
+                ],
+                description: "Stylish comfortable t-shirt crafted from breathable cotton jersey. Tailored fit designed for the fashion-conscious youth market."
+            },
+            {
+                id: 3,
+                name: "JHB Hustler All-Weather Street Jacket",
+                category: "hoodies",
+                price: 1599,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Street+Jacket+Front+Zip",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Street+Jacket+Back+Embroidery",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Street+Jacket+Pocket+Detail",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Street+Jacket+Hood+View",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Street+Jacket+Night+Wear"
+                ],
+                description: "Versatile outerwear jacket engineered for chilly Joburg evenings. Features water-resistant shell and signature zipper pullers."
+            },
+            {
+                id: 4,
+                name: "Athleisure Fleece Jogger Pants",
+                category: "pants",
+                price: 899,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Fleece+Joggers+Full",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Fleece+Joggers+Waistband",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Fleece+Joggers+Ankle+Cuff",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Fleece+Joggers+Zipper+Pocket",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Fleece+Joggers+Back+View"
+                ],
+                description: "Comfortable athletic pants with elasticated waistband, deep zipped pockets, and tapered ankles for a sleek silhouette."
+            },
+            {
+                id: 5,
+                name: "Hustler Signature Half Cap & Beanie",
+                category: "headwear",
+                price: 349,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Half+Cap+Embroidered+Logo",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Trendy+Beanie+Side",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Half+Cap+Back+Strap",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Beanie+Fold+Detail",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Headwear+Combo+Set"
+                ],
+                description: "Trendy caps, hats, beanies, and half caps embroidered with the official JHB Hustler insignia."
+            },
+            {
+                id: 6,
+                name: "Summer Athleisure Shorts & Vests",
+                category: "pants",
+                price: 649,
+                images: [
+                    "https://placehold.co/600x750/111111/f9f9f9?text=Athleisure+Shorts+Front",
+                    "https://placehold.co/600x750/333333/f9f9f9?text=Hustler+Vest+Tank",
+                    "https://placehold.co/600x750/222222/f9f9f9?text=Shorts+Drawstring+Detail",
+                    "https://placehold.co/600x750/1a1a1a/f9f9f9?text=Vest+Chest+Print",
+                    "https://placehold.co/600x750/262626/f9f9f9?text=Summer+Set+Outfit"
+                ],
+                description: "Lightweight, flexible shorts and vests designed for maximum movement during workouts and warm-weather hangouts."
+            }
+        ];
+
+        // Customer gallery photos archive with simplified Hustler #N format
+        const allCustomerPhotos = [];
+        for (let i = 1; i <= 200; i++) {
+            allCustomerPhotos.push({
+                id: i,
+                type: 'image',
+                img: `https://placehold.co/600x750/111111/f9f9f9?text=Hustler+${i}`,
+                caption: `Hustler #${i}`
+            });
+        }
+
+        let displayedPhotoCount = 24;
+        let selectedFileBase64 = null;
+        let selectedFileType = 'image';
+
+        function handleFileSelection(event) {
+            const file = event.target.files[0];
+            if (file) {
+                selectedFileType = file.type.startsWith('video') ? 'video' : 'image';
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    selectedFileBase64 = e.target.result;
+                    document.getElementById('upload-img-url').value = file.name;
+                    document.getElementById('file-upload-label-text').textContent = 'File Selected: ' + file.name;
+                    showToast(`${selectedFileType === 'video' ? 'Video' : 'Photo'} loaded from device successfully!`);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function renderCustomerGallery() {
+            const galleryGrid = document.getElementById('customer-gallery-grid');
+            const statusEl = document.getElementById('gallery-status');
+            if (!galleryGrid) return;
+            
+            galleryGrid.innerHTML = '';
+            const activePhotos = allCustomerPhotos.slice(0, displayedPhotoCount);
+
+            activePhotos.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'group relative aspect-[4/5] rounded-2xl overflow-hidden bg-brand-200 dark:bg-brand-950 border border-brand-300 dark:border-brand-700 cursor-pointer shadow-sm hover:shadow-xl transition-all';
+                
+                if (item.type === 'video') {
+                    card.setAttribute('onclick', `openVideoLightbox('${item.img}', '${item.caption}')`);
+                    card.innerHTML = `
+                        <video src="${item.img}" class="w-full h-full object-cover pointer-events-none" muted loop autoplay></video>
+                        <div class="absolute top-2 right-2 bg-black/60 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-white">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-300">Verified Hustler Video</span>
+                            <p class="text-xs font-semibold leading-tight">${item.caption}</p>
+                        </div>
+                    `;
+                } else {
+                    card.setAttribute('onclick', `openLightbox('${item.img}', '${item.caption}')`);
+                    card.innerHTML = `
+                        <img src="${item.img}" alt="${item.caption}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/111111/f9f9f9?text=Hustler'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-white">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-300">Verified Hustler</span>
+                            <p class="text-xs font-semibold leading-tight">${item.caption}</p>
+                        </div>
+                    `;
+                }
+                galleryGrid.appendChild(card);
+            });
+
+            if (displayedPhotoCount >= allCustomerPhotos.length) {
+                const loadMoreBtn = document.getElementById('load-more-container');
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            } else if (statusEl) {
+                statusEl.textContent = `Explore more photos from our customer archive.`;
+            }
+        }
+
+        window.loadMoreGalleryPhotos = function() {
+            displayedPhotoCount = Math.min(displayedPhotoCount + 24, allCustomerPhotos.length);
+            renderCustomerGallery();
+            showToast("Loaded more customer photos!");
+        }
+
+        // Owner Authentication & Upload Studio Logic
+        window.openOwnerLogin = function() {
+            document.getElementById('owner-login-modal').classList.remove('hidden');
+        }
+
+        window.closeOwnerLogin = function() {
+            document.getElementById('owner-login-modal').classList.add('hidden');
+            document.getElementById('owner-pin-input').value = '';
+        }
+
+        window.verifyOwnerPin = function(e) {
+            e.preventDefault();
+            const pin = document.getElementById('owner-pin-input').value;
+            // OWNER PIN CODE COMMENT: The secret owner PIN is aeb065f77f
+            if (pin === 'aeb065f77f') {
+                closeOwnerLogin();
+                renderOwnerManageList();
+                document.getElementById('owner-studio-modal').classList.remove('hidden');
+                showToast("Owner authentication successful!");
+            } else {
+                showToast("Incorrect PIN. Please try again.");
+            }
+        }
+
+        window.closeOwnerStudio = function() {
+            document.getElementById('owner-studio-modal').classList.add('hidden');
+            selectedFileBase64 = null;
+            selectedFileType = 'image';
+            document.getElementById('file-upload-label-text').textContent = 'Choose File (Image/Video)';
+        }
+
+        window.toggleUploadType = function(val) {
+            const extraFields = document.getElementById('product-extra-fields');
+            const manageSection = document.getElementById('gallery-manage-section');
+            if (val === 'product') {
+                extraFields.classList.remove('hidden');
+                manageSection.classList.add('hidden');
+            } else {
+                extraFields.classList.add('hidden');
+                manageSection.classList.remove('hidden');
+            }
+        }
+
+        function renderOwnerManageList() {
+            const listEl = document.getElementById('owner-manage-list');
+            if (!listEl) return;
+            listEl.innerHTML = '';
+            allCustomerPhotos.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'flex items-center justify-between p-2 bg-brand-50 dark:bg-brand-900 rounded-xl border border-brand-200 dark:border-brand-700 text-xs';
+                row.innerHTML = `
+                    <div class="flex items-center space-x-3 truncate">
+                        <span class="font-bold text-neutral-400">#${index+1}</span>
+                        <span class="font-semibold truncate text-brand-900 dark:text-white">${item.caption} (${item.type})</span>
+                    </div>
+                    <button type="button" onclick="removeGalleryItem(${item.id})" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors flex-shrink-0">
+                        Remove
+                    </button>
+                `;
+                listEl.appendChild(row);
+            });
+        }
+
+        window.removeGalleryItem = function(id) {
+            const idx = allCustomerPhotos.findIndex(p => p.id === id);
+            if (idx !== -1) {
+                allCustomerPhotos.splice(idx, 1);
+                renderCustomerGallery();
+                renderOwnerManageList();
+                showToast("Media removed from Hustler Wall successfully!");
+            }
+        }
+
+        window.handleOwnerUpload = function(e) {
+            e.preventDefault();
+            const target = document.getElementById('upload-target').value;
+            let mediaUrl = selectedFileBase64 || document.getElementById('upload-img-url').value;
+            const caption = document.getElementById('upload-caption').value;
+
+            if (!mediaUrl) {
+                showToast("Please choose a file or enter a media link.");
+                return;
+            }
+
+            if (target === 'gallery') {
+                let type = selectedFileType;
+                if (!selectedFileBase64 && (mediaUrl.endsWith('.mp4') || mediaUrl.endsWith('.webm') || mediaUrl.includes('video'))) {
+                    type = 'video';
+                }
+
+                allCustomerPhotos.unshift({
+                    id: Date.now(),
+                    type: type,
+                    img: mediaUrl,
+                    caption: caption
+                });
+                renderCustomerGallery();
+                renderOwnerManageList();
+                showToast("New Hustler Wall media added live!");
+            } else if (target === 'product') {
+                const category = document.getElementById('upload-category').value;
+                const price = Number(document.getElementById('upload-price').value) || 999;
+                products.unshift({
+                    id: products.length + 1,
+                    name: caption,
+                    category: category,
+                    price: price,
+                    images: [mediaUrl, mediaUrl, mediaUrl],
+                    description: "Newly added official drop from THE JHB HUSTLER."
+                });
+                renderProducts();
+                showToast("New product added to catalog live!");
+            }
+
+            closeOwnerStudio();
+            document.getElementById('upload-img-url').value = '';
+            document.getElementById('upload-caption').value = '';
+            document.getElementById('upload-file-input').value = '';
+        }
+
+        function switchView(viewName) {
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            const targetSection = document.getElementById(`view-${viewName}`);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+        
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const htmlEl = document.documentElement;
+                htmlEl.classList.toggle('dark');
+                if (htmlEl.classList.contains('dark')) {
+                    if (themeIcon) themeIcon.className = 'fa-solid fa-sun text-neutral-300';
+                    showToast("Dark mode activated");
+                } else {
+                    if (themeIcon) themeIcon.className = 'fa-solid fa-moon text-neutral-700';
+                    showToast("Light mode activated");
+                }
+            });
+        }
+
+        function openLightbox(imgSrc, caption) {
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxContainer = lightbox.querySelector('.relative.w-full');
+            
+            lightboxContainer.innerHTML = `
+                <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-200 dark:bg-brand-800 text-brand-900 dark:text-white rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors" aria-label="Close Lightbox">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="relative w-full aspect-[4/5] max-h-[70vh] rounded-2xl overflow-hidden bg-brand-100 dark:bg-brand-950 mb-4 flex items-center justify-center">
+                    <img id="lightbox-img" src="${imgSrc}" alt="Zoomed view" class="w-full h-full object-contain">
+                </div>
+                <p id="lightbox-caption" class="text-sm font-bold tracking-wide text-center text-neutral-700 dark:text-neutral-300">${caption}</p>
+            `;
+            lightbox.classList.remove('hidden');
+        }
+
+        function openVideoLightbox(videoSrc, caption) {
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxContainer = lightbox.querySelector('.relative.w-full');
+            
+            lightboxContainer.innerHTML = `
+                <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-200 dark:bg-brand-800 text-brand-900 dark:text-white rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors" aria-label="Close Lightbox">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="relative w-full aspect-[4/5] max-h-[70vh] rounded-2xl overflow-hidden bg-brand-100 dark:bg-brand-950 mb-4 flex items-center justify-center">
+                    <video src="${videoSrc}" class="w-full h-full object-contain" controls autoplay></video>
+                </div>
+                <p id="lightbox-caption" class="text-sm font-bold tracking-wide text-center text-neutral-700 dark:text-neutral-300">${caption}</p>
+            `;
+            lightbox.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        const filterTabs = document.querySelectorAll('.filter-btn');
+
+        function renderProducts(filter = 'all') {
+            const productGrid = document.getElementById('product-grid');
+            if (!productGrid) return;
+            
+            productGrid.innerHTML = '';
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(p => p.category === filter);
+
+            filteredProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'group bg-brand-100/50 dark:bg-brand-800/50 rounded-3xl p-4 border border-brand-200 dark:border-brand-700 shadow-sm flex flex-col justify-between transition-all duration-300 hover:border-neutral-500 hover:shadow-xl';
+                
+                let thumbnailsHtml = product.images.map((img, idx) => `
+                    <button onclick="changeProductImage(${product.id}, ${idx})" class="w-10 h-10 rounded-lg overflow-hidden border-2 border-brand-300 dark:border-brand-700 hover:border-neutral-500 transition-all flex-shrink-0">
+                        <img src="${img}" alt="Thumbnail ${idx+1}" class="w-full h-full object-cover">
+                    </button>
+                `).join('');
+
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-brand-200 dark:bg-brand-950 group/img cursor-pointer" onclick="openLightbox('${product.images[0]}', '${product.name}')">
+                            <img id="main-img-${product.id}" src="${product.images[0]}" alt="${product.name}" class="w-full h-full object-cover transform group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/111111/f9f9f9?text=Product'">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center text-white">
+                                <span class="bg-neutral-900/90 border border-neutral-700 px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-md"><i class="fa-solid fa-expand mr-1.5 text-neutral-400"></i>Zoom Photo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-2 overflow-x-auto pb-1" id="thumbnails-${product.id}">
+                            ${thumbnailsHtml}
+                        </div>
+                    </div>
+
+                    <div class="space-y-1 my-4 px-2">
+                        <span class="text-[11px] font-bold tracking-widest text-neutral-500 dark:text-neutral-400 uppercase">${product.category}</span>
+                        <h3 class="font-bold text-base text-brand-900 dark:text-white">${product.name}</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-2 font-light">${product.description}</p>
+                    </div>
+
+                    <div class="px-2 flex items-center justify-between pt-2 border-t border-brand-200 dark:border-brand-700">
+                        <span class="font-extrabold text-lg text-brand-900 dark:text-white">R${product.price.toLocaleString()}</span>
+                        <button onclick="openLightbox('${product.images[0]}', '${product.name}')" class="text-xs font-bold uppercase tracking-wider bg-brand-200 dark:bg-brand-700 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 text-brand-900 dark:text-brand-100 px-4 py-2.5 rounded-full transition-colors">
+                            View Photos
+                        </button>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
+        }
+
+        window.changeProductImage = function(productId, imageIndex) {
+            const product = products.find(p => p.id === productId);
+            if (product && product.images[imageIndex]) {
+                const mainImg = document.getElementById(`main-img-${productId}`);
+                if (mainImg) {
+                    mainImg.src = product.images[imageIndex];
+                    const parentContainer = mainImg.closest('.group\\/img');
+                    if (parentContainer) {
+                        parentContainer.setAttribute('onclick', `openLightbox('${product.images[imageIndex]}', '${product.name}')`);
+                    }
+                }
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            if (!toast || !toastMessage) return;
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        filterTabs.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterTabs.forEach(b => {
+                    b.classList.remove('bg-neutral-900', 'text-white', 'dark:bg-white', 'dark:text-neutral-900');
+                    b.classList.add('bg-brand-100', 'dark:bg-brand-800', 'text-neutral-600', 'dark:text-neutral-300', 'border', 'border-brand-200', 'dark:border-brand-700');
+                });
+                e.target.classList.remove('bg-brand-100', 'dark:bg-brand-800', 'text-neutral-600', 'dark:text-neutral-300', 'border', 'border-brand-200', 'dark:border-brand-700');
+                e.target.classList.add('bg-neutral-900', 'text-white', 'dark:bg-white', 'dark:text-neutral-900');
+                
+                renderProducts(e.target.dataset.filter);
+            });
+        });
+
+        const infoModal = document.getElementById('info-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+
+        document.querySelectorAll('.open-modal').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modalTitle.textContent = e.target.dataset.title;
+                modalDesc.textContent = e.target.dataset.desc;
+                infoModal.classList.remove('hidden');
+            });
+        });
+
+        [closeModalBtn, modalBackdrop].forEach(el => {
+            if (el) el.addEventListener('click', () => infoModal.classList.add('hidden'));
+        });
+
+        renderProducts();
+        renderCustomerGallery();
+    </script>
+</body>
+</html>
